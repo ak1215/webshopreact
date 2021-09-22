@@ -1,0 +1,13 @@
+.AllProducts, .SinglePage, .Home, .Support{
+    background-color: #91779F;
+}
+
+div.card{
+    background-color: #180024; 
+    color: #ffffff;  
+    margin: 2%;
+}
+.btn.btn-primary {
+    background-color: #91779F;
+    border: #91779F;
+  }
