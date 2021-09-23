@@ -11,3 +11,11 @@ div.card{
     background-color: #91779F;
     border: #91779F;
   }
+  .carousel .carousel-item {
+    height: 580px;
+  }
+  
+  .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+  }
