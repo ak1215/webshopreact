@@ -10,9 +10,5 @@ class ProductService {
   public getProductById(id: number) {
     return this.data.get("/products/" + id);
   }
-
-  public deleteProductById(id: number) {
-    return this.data.get("/product/" + id);
-  }
 }
 export default ProductService;

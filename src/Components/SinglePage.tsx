@@ -3,20 +3,22 @@ import { Button, Card, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
 import { ProductType } from "./ProductType";
 import "../Style/Main.css";
+import ProductService from "./ProductService";
 
 export default function SinglePage() {
   const { id } = useParams<{ id: string }>();
 
   const [product, setProducts] = useState<ProductType>({} as ProductType);
   const [isLoading, setisLoading] = useState<boolean>(true);
+
+  const service = new ProductService();
+
   useEffect(() => {
-    fetch("http://localhost:3000/products/" + id)
-      .then((result) => result.json())
-      .then((data) => {
-        setProducts(data);
-        setisLoading(false);
-        console.log("done");
-      });
+    service.getProductById(parseInt(id)).then((product) => {
+      setProducts(product.data);
+      setisLoading(false);
+      console.log("done");
+    });
   }, [id]);
   return (
     <div className="SinglePage">
@@ -34,7 +36,7 @@ export default function SinglePage() {
               <Card.Text>
                 Description: Description: Lorem ipsum dolor sit amet, consetetur
                 sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. 
+                labore et dolore magna aliquyam erat, sed diam voluptua.
               </Card.Text>
               <p>Price: {product.product_price}</p>
 
