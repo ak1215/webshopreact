@@ -6,20 +6,23 @@ import { ProductType } from "./ProductType";
 import "../Style/Main.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { SearchContext } from "../Contexts/SearchContext";
+import ProductService from "./ProductService";
 
 export default function AllProducts() {
+  //create instance of ProductService
+  const service = new ProductService();
+  //hooks
   const [products, setProducts] = useState<ProductType[]>([]);
   const [isLoading, setisLoading] = useState<boolean>(true);
+
   useEffect(() => {
-    fetch("http://localhost:3000/products")
-      .then((result) => result.json())
-      .then((data) => {
-        setProducts(data);
-        setisLoading(false);
-        console.log("done");
-      });
+    service.getAllProducts().then((resolve) => {
+      setProducts(resolve.data);
+      setisLoading(false);
+    });
   }, []);
 
+  
   const { isAuthenticated } = useContext(LoginContext);
   const {searchTerm} = useContext(SearchContext)
 
@@ -28,7 +31,6 @@ export default function AllProducts() {
       <div className="AllProducts">
         <Container>
           <div className="ListOfCards">
-
             <Row>
               {isLoading && <h1>Loading...</h1>}
               {isAuthenticated && <h1>...</h1>}

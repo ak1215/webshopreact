@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SearchContextProvider from "./Contexts/SearchContext";
 import Home from "./Components/Home";
 import Support from "./Components/Support";
+import Contact from "./Components/Contact";
 import AllProducts from "./Components/AllProducts";
 
 ReactDOM.render(
@@ -21,6 +22,8 @@ ReactDOM.render(
           <Route path="/products" exact component={AllProducts} />
           <Route path="/products/:id" exact component={SinglePage} />
           <Route path="/support" exact component={Support} />
+          <Route path="/contact" exact component={Contact} />
+
 
         </Switch>
       </SearchContextProvider>

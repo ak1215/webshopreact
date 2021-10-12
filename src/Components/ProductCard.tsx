@@ -28,7 +28,7 @@ export default function ProductCard({
         </Card.Text>
         <p>Price: {product_price}</p>
 
-        <Button href={"http://localhost:3001/products/" + id}>View</Button>
+        <Button href={"http://localhost:3000/products/" + id}>View</Button>
       </Card.Body>
     </Card>
   );

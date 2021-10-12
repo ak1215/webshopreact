@@ -1,4 +1,4 @@
-.AllProducts, .SinglePage, .Home, .Support{
+.AllProducts, .SinglePage, .Home, .Support, .Container{
     background-color: #91779F;
 }
 
@@ -6,6 +6,7 @@ div.card{
     background-color: #180024; 
     color: #ffffff;  
     margin: 2%;
+    padding: 5%;
 }
 .btn.btn-primary {
     background-color: #91779F;
@@ -19,3 +20,4 @@ div.card{
     position: absolute;
     object-fit: cover;
   }
+

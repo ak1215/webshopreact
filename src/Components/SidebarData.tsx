@@ -18,9 +18,17 @@ export const SidebarData = [
   },
 
   {
+    title: "Contact",
+    path: "/contact",
+    icon: <IoIcons.IoMdContact />,
+    cName: "nav-text",
+  },
+  
+  {
     title: "Support",
     path: "/support",
     icon: <IoIcons.IoMdHelpCircle />,
     cName: "nav-text",
   },
+
 ];
