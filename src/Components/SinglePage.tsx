@@ -36,7 +36,7 @@ export default function SinglePage() {
               <Card.Text>
                 Description: Description: Lorem ipsum dolor sit amet, consetetur
                 sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. 
+                labore et dolore magna aliquyam erat, sed diam voluptua.
               </Card.Text>
               <p>Price: {product.product_price}</p>
 
