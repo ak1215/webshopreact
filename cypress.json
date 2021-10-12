@@ -1,0 +1,6 @@
+{
+    "component": {
+      "componentFolder": "../src/Components/",
+      "testFiles": "../src/Test/*.test.{ts,tsx}"
+    } 
+  }
